@@ -1,0 +1,56 @@
+.home-card {
+    border-radius: 4px;
+    max-width: 90%;
+    max-height: 90%;
+    margin: 20px;
+    padding: 20px;
+
+    .mat-card-image {
+      margin: 20px;
+      width: auto;
+      height: 300px;
+    }
+
+    .home-card-content {
+      display: flex;
+      justify-content: space-between;
+    }
+    .card-title{
+        font-size: 20px;
+        font-weight: 400;
+    }
+    div{
+        margin: 20px; 
+    }
+
+    h2{
+        display: inline;
+    }
+    h3{
+        display: inline;
+    }
+
+    .mat-form-field{
+        width: 100px;
+        height: 55px;
+    }
+
+    .add-remove-button{
+        display: -webkit-box;
+        margin-left: 0px;
+
+    }
+    .mat-icon-button{
+        height: 55px;
+        width: 55px;
+    }
+
+    .mat-button{
+        height: 55px;
+        width: 150px;
+        margin-left: 10px;
+    }
+    
+
+
+}

@@ -1,0 +1,13 @@
+<div class="products-content">
+  <mat-grid-list cols="4" rowHeight="4:6" gutterSize="20px">
+    <mat-grid-tile *ngFor="let product of products | async" [routerLink]="['/Product', product.id]">
+      <img [src]="images[product.id]" height="200px">
+      
+      <mat-grid-tile-footer>
+        {{product.name}}
+      </mat-grid-tile-footer>
+      
+    </mat-grid-tile>  
+  </mat-grid-list>
+</div>
+

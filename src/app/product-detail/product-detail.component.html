@@ -1,0 +1,26 @@
+<mat-card class="home-card">
+    <mat-card-content class="home-card-content">
+      <img mat-card-image [src]="productImage" alt="Product Photo">
+      <div>
+        <h1>{{product.name}}</h1>
+        <h2>Price: </h2> 
+        <h3>{{product.price}}€ / unit</h3>
+        <br>
+        <h2>Description: </h2>
+        <h3>{{product.description}} </h3>
+        <br>
+        <h2>Items in stock: </h2>
+        <h3>{{product.stock}} units </h3>
+
+        <div class="add-remove-button">
+          <form class="row-form">
+            <mat-form-field appearance="outline">
+              <mat-label></mat-label>
+              <input type="number" matInput [value]="value" min="0" [max]="product.stock" onkeydown="return false">
+            </mat-form-field>
+          </form>
+          <button mat-button appearance="outline" color="primary" (click)="addToCart()" routerLink="ShopAll">Add to Cart</button>
+        </div>
+      </div>
+    </mat-card-content>
+</mat-card>

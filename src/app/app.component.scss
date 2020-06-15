@@ -1,0 +1,25 @@
+.spacer {
+flex: 1 1 auto;
+}
+
+.selected{
+    color: #3F51B5;
+}
+
+.icon{
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+mat-sidenav{
+
+    width: 400px;
+}
+
+.mat-sidenav-content{
+    background-color: white;
+}
+  
+mat-sidenav-container {
+    height: calc(100vh - (64px));
+}

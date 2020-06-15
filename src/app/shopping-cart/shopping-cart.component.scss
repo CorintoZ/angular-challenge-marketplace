@@ -1,0 +1,23 @@
+.mat-form-field{
+    width: 123px;
+    height: 55px;
+    margin-bottom: 10px;
+}
+
+.finish-cart-button{
+    position: absolute;
+    bottom: 0px;
+    width: 400px;
+    height: 60px;
+    font-size: larger;
+    background: rgba(63,81,181,.60) !important;
+    color: #fff;
+}
+
+.mat-list-avatar{
+    border-radius: 0% !important;
+}
+
+::ng-deep .mat-simple-snackbar-action button{
+    color: lightgray !important;
+}

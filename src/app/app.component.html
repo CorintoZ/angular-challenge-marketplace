@@ -1,0 +1,24 @@
+<mat-toolbar color="white">
+    <mat-toolbar-row>
+      <button mat-button [ngClass]="{selected: isSelected('ShopAll')}" (click)="changePage('ShopAll')" routerLink="ShopAll">Shop All</button>
+      <span class="spacer"></span>
+      <span class="title-center">Market Place</span>
+      <span class="spacer"></span>
+      <button mat-button [ngClass]="{selected: isSelected('AboutUs')}" (click)="changePage('AboutUs')" routerLink="AboutUs">About Us</button>
+      <mat-icon [matBadge]="numberItemsInCart" matBadgeColor="primary" class="icon" (click)="sidenav.toggle()">shopping_cart</mat-icon>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav position="end">
+    <app-shopping-cart></app-shopping-cart>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    
+    <router-outlet></router-outlet>
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>
+    

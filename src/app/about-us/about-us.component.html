@@ -1,0 +1,11 @@
+<div *ngIf="!isLoading" class="about-us-content">
+    <h2>Who are we?</h2>
+    <p>{{aboutUs.description}}</p>
+
+    <h2>Where are we?</h2>
+    <p>Address: {{aboutUs.location.address}}</p>
+    <div #mapContainer id="map"></div>
+    <br>
+    <h2>You can contact us at: {{aboutUs.phone_number}}</h2>
+</div>
+

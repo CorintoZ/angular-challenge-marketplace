@@ -1,0 +1,26 @@
+<mat-list>
+    <mat-list-item *ngFor="let item of items; let i = index">
+    <img matListAvatar [src]="item.image">
+    <h3 matLine> {{item.product.name}} </h3>
+    <h2 matLine>
+      <span> {{item.product.price}}€ / unit </span>
+    </h2>
+    <p matLine>
+        <span>  
+            <form class="row-form">
+                <mat-form-field appearance="outline">
+                  <mat-label></mat-label>
+                  <input type="number" id="{{i}}" matInput [value]="item.quantity" min="0" [max]="item.product.stock" onkeydown="return false">
+                </mat-form-field>
+            </form>
+        </span> 
+    </p>
+    <p matLine>
+        <span> 
+            <button mat-stroked-button (click)="deleteProduct(i)" color="primary">Delete product</button>
+        </span> 
+    </p>
+    <mat-divider></mat-divider>
+    </mat-list-item>
+</mat-list>
+<button mat-button class="finish-cart-button" (click)="finishCart()">Finish Cart</button>
