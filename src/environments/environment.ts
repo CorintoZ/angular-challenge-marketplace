@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
 
-  apiUrl: 'https://reby-mobile-engineer-test.herokuapp.com'
+  apiUrl: 'https://reby-front-chanllenge.herokuapp.com'
 };
 
 /*
