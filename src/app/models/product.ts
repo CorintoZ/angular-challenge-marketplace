@@ -4,6 +4,8 @@ export class Product {
     price: number;
     stock: number;
     description: string;
+    on_sale: boolean;
+    on_sale_price: number
 
     constructor(attributes: Product) {
         Object.assign(this, attributes);

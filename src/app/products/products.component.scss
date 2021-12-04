@@ -6,6 +6,21 @@ img{
     margin: 20px;
 }
 
+.on-sale {
+    border: 2px solid red;
+    border-radius: 5px;
+    .price-container {
+        span:first-child {
+            text-decoration: line-through;
+            padding-right: 4px;
+        }
+        span:nth-of-type(2) {
+            color: red;
+            font-size: 1.5rem;
+        }
+    }
+}
+
 .mat-grid-tile-footer{
     background: rgba(63,81,181,.60) !important;
     display: flex;
