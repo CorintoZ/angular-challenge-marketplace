@@ -1,0 +1,7 @@
+.products-content {
+  margin: 20px;
+  &__tile--on-sale {
+    border: 2px solid red;
+    border-radius: 5px;
+  }
+}

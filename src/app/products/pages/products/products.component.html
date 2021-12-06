@@ -1,0 +1,16 @@
+<div class="products-content">
+  <mat-grid-list cols="4" rowHeight="4:6" gutterSize="20px">
+    <mat-grid-tile
+      *ngFor="let product of products | async | orderBy: 'stock':true"
+      [ngClass]="{
+        'products-content__tile--on-sale': product.stock && product.on_sale
+      }"
+    >
+      <product
+        [routerLink]="['/Product', product.id]"
+        [product]="product"
+        [image]="images[product.id]"
+      ></product>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

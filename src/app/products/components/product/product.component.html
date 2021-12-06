@@ -1,0 +1,19 @@
+<div
+  class="product-container"
+  [ngClass]="{ 'product-container--on-sale': product.on_sale && product.stock }"
+>
+  <img
+    [ngClass]="{ 'out-stock': !product.stock }"
+    [src]="image"
+    height="200px"
+  />
+  <mat-grid-tile-footer>
+    <span class="product__title">{{ product.name }}</span>
+    <div class="product__price">
+      <span>{{ product.price }}€</span>
+      <span *ngIf="product.on_sale && product.stock"
+        >{{ product.on_sale_price }}€</span
+      >
+    </div>
+  </mat-grid-tile-footer>
+</div>

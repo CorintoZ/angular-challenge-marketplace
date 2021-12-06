@@ -18,27 +18,18 @@ import { OrderModule } from 'ngx-order-pipe';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { ProductsComponent } from './products/products.component';
+import { ProductsModule } from './products/products.module';
 import { ProductsService } from './services/products.service';
 import { ShoppingCartService } from './services/shopping-cart.service';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    ProductsComponent,
-    AboutUsComponent,
-    ProductDetailComponent,
-    ShoppingCartComponent
-  ],
+  declarations: [AppComponent, AboutUsComponent, ShoppingCartComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
     MatListModule,
     HttpClientModule,
     MatIconModule,
@@ -52,11 +43,9 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     MatInputModule,
     FormsModule,
     MatSnackBarModule,
-    OrderModule
-
+    ProductsModule,
   ],
-  providers: [ ProductsService,
-                ShoppingCartService ],
-  bootstrap: [AppComponent]
+  providers: [ProductsService, ShoppingCartService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
